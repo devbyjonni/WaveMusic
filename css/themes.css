@@ -1,0 +1,94 @@
+/* ===========================================
+   Light Theme (Default)
+=========================================== */
+:root {
+    /* Backgrounds */
+    --color-bg: #f9fafb;
+    --color-bg-alt: #f3f4f6;
+    --color-bg-image: #ffffff;
+    --content-bg: rgba(255, 255, 255, 0.6);
+
+
+    /* Surfaces */
+    --color-surface: #ffffff;
+
+    /* Text Colors */
+    --color-text: #1f2937;
+    --color-muted-text: #6b7280;
+
+    /* Borders */
+    --color-border: #e5e7eb;
+
+    /* Primary Colors */
+    --color-primary: #2563eb;
+    --color-primary-light: #60a5fa;
+    --color-primary-dark: #1e3a8a;
+}
+
+/* ===========================================
+   Manual Dark Mode (using body.dark-mode)
+=========================================== */
+body.dark-mode {
+    /* Backgrounds */
+    --color-bg: #1a1a1a;
+    --color-bg-alt: #222;
+    --color-bg-image: #f9fafb;
+    --color-bg-image: #000000;
+    --content-bg: rgba(0, 0, 0, 0.6);
+
+    /* Surfaces */
+    --color-surface: #2a2a2a;
+
+    /* Text Colors */
+    --color-text: #f5f5f5;
+    --color-muted-text: #bbb;
+
+    /* Borders */
+    --color-border: #444;
+
+    /* Primary Colors */
+    --color-primary: #4f8cff;
+    --color-primary-light: #5c9dff;
+    --color-primary-dark: #3a6edc;
+}
+
+/* ===========================================
+   System Dark Mode (optional fallback)
+=========================================== */
+@media (prefers-color-scheme: dark) {
+    :root:not(.dark-mode) {
+        /* Backgrounds */
+        --color-bg: #1a1a1a;
+        --color-bg-alt: #222;
+        --color-bg-image: #000000;
+        --content-bg: rgba(0, 0, 0, 0.6);
+
+        /* Surfaces */
+        --color-surface: #2a2a2a;
+
+        /* Text Colors */
+        --color-text: #f5f5f5;
+        --color-muted-text: #bbb;
+
+        /* Borders */
+        --color-border: #444;
+
+        /* Primary Colors */
+        --color-primary: #4f8cff;
+        --color-primary-light: #5c9dff;
+        --color-primary-dark: #3a6edc;
+    }
+}
+
+/* ===========================================
+   System Dark Mode (Logo Visibility Helpers)
+=========================================== */
+@media (prefers-color-scheme: dark) {
+    body:not(.dark-mode) .light-logo {
+        display: none;
+    }
+
+    body:not(.dark-mode) .dark-logo {
+        display: block;
+    }
+}

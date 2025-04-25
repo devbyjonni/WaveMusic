@@ -1,0 +1,121 @@
+/* ===========================================
+   Reset
+=========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===========================================
+   Root Variables (Fonts)
+=========================================== */
+:root {
+    /* Typography Option 2 */
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Work Sans', sans-serif;
+    --font-display: 'Playfair Display', serif;
+}
+
+/* ===========================================
+   Global Styles
+=========================================== */
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+/* ===========================================
+   Headings
+=========================================== */
+h1,
+h2,
+h3 {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/* ===========================================
+   Font Utility Classes
+=========================================== */
+.font-primary {
+    font-family: var(--font-primary);
+}
+
+.font-secondary {
+    font-family: var(--font-secondary);
+}
+
+.font-display {
+    font-family: var(--font-display);
+}
+
+/* ===========================================
+   Link Styles (Base + Variants)
+=========================================== */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Primary Link */
+a.link-primary {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+a.link-primary:hover {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    /* Remove underline */
+}
+
+/* Secondary Link */
+a.link-secondary {
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+a.link-secondary:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+    /* Remove underline */
+}
+
+/* Muted Link (Footer etc.) */
+a.link-muted {
+    color: var(--color-muted-text);
+    transition: color 0.2s ease;
+}
+
+a.link-muted:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+    /* Remove underline */
+}
+
+/* ===========================================
+   Accessibility Helpers
+=========================================== */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
